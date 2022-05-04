@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="static/css/styles.css" type="text/css" charset="utf-8">
+        <title>home</title>
+    </head>
+    <body>
+        {% include 'headerMain.html' %}
+
+        <div id="div3">
+            <p>A simple tool too split bills!</p>
+        </div>
+        
+        <div>
+            <p>Welcome back {{username}}!</p>
+        </div>
+
+        <div id="div4">
+            <table>
+            <tr>
+                <td><a href="manageBills">manageBills</a></td>
+            </tr>
+            </table>
+        </div>
+        
+        {% include 'footer.html' %}
+    </body>
+</html>

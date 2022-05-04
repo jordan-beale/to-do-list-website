@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="static/css/styles.css" type="text/css" charset="utf-8">
+        <title>createNewList</title>
+    </head>
+    <body>
+        {% include 'header.html' %}
+
+        <table>
+          <tr>
+            <td><a href="/">home</a></td>
+            <td><a href="manageLists">manageLists</a></td>
+            <td><a href="editList">editList</a></td>
+          </tr>
+        </table>
+
+        <form action='/createNewList' method='post'>
+          <label>name of new list:</label>
+          <input type="text" name="newListName">
+          <input type='submit' value='Submit'>
+        </form>
+
+        {% include 'footer.html' %}
+    </body>
+</html>

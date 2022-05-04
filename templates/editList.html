@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="static/css/styles.css" type="text/css" charset="utf-8">
+        <title>editList</title>
+    </head>
+    <body>
+      {% include 'header.html' %}
+
+        <table>
+          <tr>
+            <td><a href="/">home</a></td>
+            <td><a href="manageLists">manageLists</a></td>
+            <td><a href="viewLists">viewLists</a></td>
+          </tr>
+        </table>
+
+        <form action='/editList' method='post'>
+          <label>name of list that's being added to:</label>
+          <input type="text" name="listName"><br>
+          <label>name of item being added:</label>
+          <input type="text" name="itemName">
+          <input type='submit' value='Submit'>
+        </form>
+
+        {% include 'footer.html' %}
+    </body>
+</html>

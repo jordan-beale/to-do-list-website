@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="static/css/styles.css" type="text/css" charset="utf-8">
+        <title>home</title>
+    </head>
+    <body>
+        {% include 'headerMain.html' %}
+        
+        <div id="div3">
+            <p>A simple tool too create, edit, organise and share to-do lists!</p>
+        </div>
+        
+        <div id="div4">
+            <table>
+            <tr> 
+                <td><a href="login">login</a></td>
+                <td><a href="register">register</a></td>
+            </tr>
+            </table>
+        </div>
+
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            {% for message in messages %}
+              <a>{{ message }}</a>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+        
+        {% include 'footerNoLogout.html' %}
+    </body>
+</html>

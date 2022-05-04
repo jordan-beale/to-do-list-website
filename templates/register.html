@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="static/css/styles.css" type="text/css" charset="utf-8">
+        <title>register</title>
+        {% include 'header.html' %}
+        <script src='static/js/register.js'></script>
+    </head>
+    <body>
+
+        <table>
+          <tr>
+            <td><a href="/">home</a></td>
+            <td><a href="login">login</a></td>
+          </tr>
+        </table>
+        
+        <form id="form" action="/register" method='post'>
+          <label>Username:</label>
+          <input id="username" type="text" name="username"><br>
+          <label>Password:</label>
+          <input id="password" type='password' name="password"><br>
+          <input class="submit" type='submit' value='submit'>
+        </form>
+
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            {% for message in messages %}
+              <a>{{ message }}</a>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+        
+        {% include 'footerNoLogout.html' %}
+    </body>
+</html>

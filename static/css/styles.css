@@ -1,0 +1,74 @@
+body{
+  background-color: #000000;
+  color: #dfe0e1;
+}
+
+#wrapDiv1{
+    height: 75px;
+    border: 5px solid darkorange;
+    padding: 10px;
+}
+
+#div1{
+    float: left;
+}
+
+#div2{
+    padding-left: 5px;
+    float: left;
+    color: white;
+}
+
+#div3{
+    color:white;
+}
+
+#footer{
+  color: white;
+  position: fixed;
+  left: 15px;
+  bottom: 0;
+
+}
+
+#logout{
+  color: white;
+  position: fixed;
+  right: 0px;
+  top: 110px;
+
+}
+
+#addForm{
+  position:fixed;
+  right: 300px;
+  top: 150px;
+}
+
+#lists{
+  padding: 5px;
+}
+
+td{
+  padding: 15px;
+}
+
+form{
+  padding: 15px;
+}
+
+tr{
+  padding: 15px;
+}
+
+a{
+  color: white;
+}
+
+.error{
+  color: red;
+}
+
+.valid{
+  color: green;
+}

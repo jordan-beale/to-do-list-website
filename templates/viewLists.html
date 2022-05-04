@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="static/css/styles.css" type="text/css" charset="utf-8">
+        <title>viewLists</title>
+        {% include 'header.html' %}
+        <script src='static/js/todo.js'></script>
+        <script src='static/js/todo2.js'></script>
+    </head>
+    <body>
+
+        <table>
+          <tr>
+            <td><a href="/">home</a></td>
+            <td><a href="manageLists">manageLists</a></td>
+          </tr>
+        </table>
+
+        <thead>
+        <p>-----All lists-----</p>
+        </thead>
+        
+        <table>
+					<tbody>
+						{% for entry in listNames %}
+              <td>
+              <tr>{{entry.name}}</tr>
+
+              {% for list in listItems %}
+              <tr id="lists">
+                <ul id={{entry.name}}>
+                {% if list.list_id == entry.id %}
+                  <li>{{list.name}} 
+                    {% if list.completed_status == "✗" %} 
+                    <a id="{{list.id}}text">✗</a> <button id="{{list.id}}" class="button">CLICK TO COMPLETE/ UNCOMPLETE</button> 
+                    {% else %} 
+                    <a id="{{list.id}}text">✓</a> <button id="{{list.id}}" class="button">CLICK TO COMPLETE/ UNCOMPLETE</button> 
+                    {% endif %}
+                  </li>               
+                </ul>
+                {% endif %}
+              {% endfor %}
+              </tr>
+              </td>
+            {% endfor %}
+					</tbody>
+				</table>
+        
+        <form id="addForm">
+          <label>name of list that's being added to:</label>
+          <input id="listName" type="text" name="listName"><br>
+          <label>name of item being added:</label>
+          <input id="itemName" type="text" name="itemName"><br>
+          <input type='submit' value='Submit'>
+        </form>
+
+        {% include 'footer.html' %}
+    </body>
+</html>

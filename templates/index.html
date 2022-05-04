@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+				<h1>Todo List!</h1>
+				
+
+				<table>
+					<thead>
+						<tr>
+							<th width='200px'>All lists</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for entry in listNames %}
+						<tr>
+							<td>{{entry.name}}</td>
+						</tr>
+						{% else %}
+						<tr>
+							<td>no entries</td>
+						</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+				
+
+				<table>
+					<thead>
+						<tr>
+							<th width='200px'>All list items</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for entry in allItems %}
+						<tr>
+							<td>{{entry.name}}</td>
+						</tr>
+						{% else %}
+						<tr>
+							<td>no entries</td>
+						</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+
+				<table>
+					<thead>
+						<tr>
+							<th width='200px'>WorkTasks list items</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for entry in workTasks %}
+						<tr>
+							<td>{{entry.name}}</td>
+						</tr>
+						{% else %}
+						<tr>
+							<td>no entries</td>
+						</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+				
+				<table>
+					<thead>
+						<tr>
+							<th width='200px'>A users lists</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for entry in userLists %}
+						<tr>
+							<td>{{entry.name}}</td>
+						</tr>
+						{% else %}
+						<tr>
+							<td>no entries</td>
+						</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+				
+				<table>
+					<thead>
+						<tr>
+							<th width='200px'>All completed items in a list</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for entry in completeInList %}
+						<tr>
+							<td>{{entry.name}}</td>
+						</tr>
+						{% else %}
+						<tr>
+							<td>no entries</td>
+						</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+
+				<table>
+					<thead>
+						<tr>
+							<th width='200px'>All incomplete items in a list</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for entry in incompleteInList %}
+						<tr>
+							<td>{{entry.name}}</td>
+						</tr>
+						{% else %}
+						<tr>
+							<td>no entries</td>
+						</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+
+			</div>
+		</div>
+	</body>
+</html>
